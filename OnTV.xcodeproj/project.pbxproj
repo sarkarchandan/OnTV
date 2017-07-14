@@ -8,12 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		176C06C31F18555B00346967 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176C06C21F18555B00346967 /* AppDelegate.swift */; };
-		176C06C51F18555B00346967 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176C06C41F18555B00346967 /* ViewController.swift */; };
+		176C06C51F18555B00346967 /* CarouselViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176C06C41F18555B00346967 /* CarouselViewController.swift */; };
 		176C06C81F18555B00346967 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 176C06C61F18555B00346967 /* Main.storyboard */; };
 		176C06CB1F18555B00346967 /* OnTV.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 176C06C91F18555B00346967 /* OnTV.xcdatamodeld */; };
 		176C06CD1F18555B00346967 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 176C06CC1F18555B00346967 /* Assets.xcassets */; };
 		176C06D01F18555B00346967 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 176C06CE1F18555B00346967 /* LaunchScreen.storyboard */; };
 		176C06DB1F18555B00346967 /* OnTVTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176C06DA1F18555B00346967 /* OnTVTests.swift */; };
+		8FBFF8D25E1B79CDC29A0F79 /* Pods_OnTV.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F372AC0657A2DE2F16D5257 /* Pods_OnTV.framework */; };
+		9D2FE0F33879B52D3EAE5A5B /* Pods_OnTVTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFD3431D06A76D604117A6CD /* Pods_OnTVTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,9 +29,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0E1C5AB5BE4E591D44955FB7 /* Pods-OnTVTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OnTVTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-OnTVTests/Pods-OnTVTests.release.xcconfig"; sourceTree = "<group>"; };
 		176C06BF1F18555B00346967 /* OnTV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OnTV.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		176C06C21F18555B00346967 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		176C06C41F18555B00346967 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		176C06C41F18555B00346967 /* CarouselViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselViewController.swift; sourceTree = "<group>"; };
 		176C06C71F18555B00346967 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		176C06CA1F18555B00346967 /* OnTV.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = OnTV.xcdatamodel; sourceTree = "<group>"; };
 		176C06CC1F18555B00346967 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -38,6 +41,11 @@
 		176C06D61F18555B00346967 /* OnTVTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OnTVTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		176C06DA1F18555B00346967 /* OnTVTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnTVTests.swift; sourceTree = "<group>"; };
 		176C06DC1F18555B00346967 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		336913873DC9C65A483B7049 /* Pods-OnTVTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OnTVTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OnTVTests/Pods-OnTVTests.debug.xcconfig"; sourceTree = "<group>"; };
+		4F372AC0657A2DE2F16D5257 /* Pods_OnTV.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OnTV.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		55C0CED424B8DD1E469CC241 /* Pods-OnTV.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OnTV.release.xcconfig"; path = "Pods/Target Support Files/Pods-OnTV/Pods-OnTV.release.xcconfig"; sourceTree = "<group>"; };
+		BFD3431D06A76D604117A6CD /* Pods_OnTVTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OnTVTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC191B17190746901BD6C1C1 /* Pods-OnTV.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OnTV.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OnTV/Pods-OnTV.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8FBFF8D25E1B79CDC29A0F79 /* Pods_OnTV.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,18 +61,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D2FE0F33879B52D3EAE5A5B /* Pods_OnTVTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		05AABE0C4FDBB62ECDA4ABE0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4F372AC0657A2DE2F16D5257 /* Pods_OnTV.framework */,
+				BFD3431D06A76D604117A6CD /* Pods_OnTVTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		176C06B61F18555B00346967 = {
 			isa = PBXGroup;
 			children = (
 				176C06C11F18555B00346967 /* OnTV */,
 				176C06D91F18555B00346967 /* OnTVTests */,
 				176C06C01F18555B00346967 /* Products */,
+				C572120C33423E2A6DAAB576 /* Pods */,
+				05AABE0C4FDBB62ECDA4ABE0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -79,9 +100,10 @@
 		176C06C11F18555B00346967 /* OnTV */ = {
 			isa = PBXGroup;
 			children = (
-				176C06C21F18555B00346967 /* AppDelegate.swift */,
-				176C06C41F18555B00346967 /* ViewController.swift */,
-				176C06C61F18555B00346967 /* Main.storyboard */,
+				17F787E61F185713008ABA4A /* Utils */,
+				17F787E51F185702008ABA4A /* Model */,
+				17F787E41F1856FC008ABA4A /* View */,
+				17F787E31F1856F4008ABA4A /* Controller */,
 				176C06CC1F18555B00346967 /* Assets.xcassets */,
 				176C06CE1F18555B00346967 /* LaunchScreen.storyboard */,
 				176C06D11F18555B00346967 /* Info.plist */,
@@ -99,6 +121,48 @@
 			path = OnTVTests;
 			sourceTree = "<group>";
 		};
+		17F787E31F1856F4008ABA4A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				176C06C21F18555B00346967 /* AppDelegate.swift */,
+				176C06C41F18555B00346967 /* CarouselViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		17F787E41F1856FC008ABA4A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				176C06C61F18555B00346967 /* Main.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		17F787E51F185702008ABA4A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		17F787E61F185713008ABA4A /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
+		C572120C33423E2A6DAAB576 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EC191B17190746901BD6C1C1 /* Pods-OnTV.debug.xcconfig */,
+				55C0CED424B8DD1E469CC241 /* Pods-OnTV.release.xcconfig */,
+				336913873DC9C65A483B7049 /* Pods-OnTVTests.debug.xcconfig */,
+				0E1C5AB5BE4E591D44955FB7 /* Pods-OnTVTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -106,9 +170,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 176C06DF1F18555B00346967 /* Build configuration list for PBXNativeTarget "OnTV" */;
 			buildPhases = (
+				88C190BD2D14B505270E64A9 /* [CP] Check Pods Manifest.lock */,
 				176C06BB1F18555B00346967 /* Sources */,
 				176C06BC1F18555B00346967 /* Frameworks */,
 				176C06BD1F18555B00346967 /* Resources */,
+				0A303BD033F5DEA57436C43E /* [CP] Embed Pods Frameworks */,
+				FDD84FF0C3293D37AFD49894 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -123,9 +190,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 176C06E21F18555B00346967 /* Build configuration list for PBXNativeTarget "OnTVTests" */;
 			buildPhases = (
+				25A84E98A04AA2400ABABDAF /* [CP] Check Pods Manifest.lock */,
 				176C06D21F18555B00346967 /* Sources */,
 				176C06D31F18555B00346967 /* Frameworks */,
 				176C06D41F18555B00346967 /* Resources */,
+				9095E031B1A41484B86FEBD3 /* [CP] Embed Pods Frameworks */,
+				58BC8571CE5662916183F52E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -197,12 +267,105 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0A303BD033F5DEA57436C43E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OnTV/Pods-OnTV-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		25A84E98A04AA2400ABABDAF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		58BC8571CE5662916183F52E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OnTVTests/Pods-OnTVTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		88C190BD2D14B505270E64A9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		9095E031B1A41484B86FEBD3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OnTVTests/Pods-OnTVTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FDD84FF0C3293D37AFD49894 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OnTV/Pods-OnTV-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		176C06BB1F18555B00346967 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				176C06C51F18555B00346967 /* ViewController.swift in Sources */,
+				176C06C51F18555B00346967 /* CarouselViewController.swift in Sources */,
 				176C06C31F18555B00346967 /* AppDelegate.swift in Sources */,
 				176C06CB1F18555B00346967 /* OnTV.xcdatamodeld in Sources */,
 			);
@@ -343,6 +506,7 @@
 		};
 		176C06E01F18555B00346967 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EC191B17190746901BD6C1C1 /* Pods-OnTV.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = OnTV/Info.plist;
@@ -355,6 +519,7 @@
 		};
 		176C06E11F18555B00346967 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 55C0CED424B8DD1E469CC241 /* Pods-OnTV.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = OnTV/Info.plist;
@@ -367,6 +532,7 @@
 		};
 		176C06E31F18555B00346967 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 336913873DC9C65A483B7049 /* Pods-OnTVTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -381,6 +547,7 @@
 		};
 		176C06E41F18555B00346967 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0E1C5AB5BE4E591D44955FB7 /* Pods-OnTVTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -412,6 +579,7 @@
 				176C06E11F18555B00346967 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		176C06E21F18555B00346967 /* Build configuration list for PBXNativeTarget "OnTVTests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +588,7 @@
 				176C06E41F18555B00346967 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
