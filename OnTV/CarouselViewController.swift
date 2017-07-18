@@ -174,23 +174,23 @@ NSFetchedResultsControllerDelegate{
     }
     
     // Defines what happens when use clicks on a collection item
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        if let seriesObjects = seriesBasicFetchedResultController.fetchedObjects , seriesObjects.count > 0 {
-            let series = seriesObjects[indexPath.row]
-            performSegue(withIdentifier: "showSeriesDetail", sender: series)
-        }
-    }
-    
-    // Prepares to perform the Segue transition
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "showSeriesDetail" {
-            if let destination = segue.destination as? ShowDetailViewController {
-                if let series = sender as? Series {
-                    destination.series = series
-                }
-            }
-        }
-    }
+//    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+//        if let seriesObjects = seriesBasicFetchedResultController.fetchedObjects , seriesObjects.count > 0 {
+//            let series = seriesObjects[indexPath.row]
+//            performSegue(withIdentifier: "showSeriesDetail", sender: series)
+//        }
+//    }
+//    
+//    // Prepares to perform the Segue transition
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if segue.identifier == "showSeriesDetail" {
+//            if let destination = segue.destination as? ShowDetailViewController {
+//                if let series = sender as? Series {
+//                    destination.series = series
+//                }
+//            }
+//        }
+//    }
 }
 
 //MARK: - Scrolling customisation component
