@@ -17,13 +17,25 @@ UISearchBarDelegate{
     
     // Getting reference of the PersistentContainer
     var container: NSPersistentContainer? = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer
-    // Getting reference of the NSFetchedResultController
+    // Getting reference of the NSFetchedResultController for Series
     var seriesBasicFetchedResultController: NSFetchedResultsController<Series>!
+    
+    //An array to store the persisted Generes in the Datastore
+    var persistedGeneres = ["All"]
+    
     // Outlet for the UiCollectionView
     @IBOutlet weak var seriesCollectionViewOutlet: UICollectionView!
     // Computed property for the UIStatusBarStyle
+    
+    //Outlet for UIPickerView
+    @IBOutlet weak var carouselPickerViewOutlet: UIPickerView!
+    
+    
+    @IBOutlet weak var pickerButtonOutlet: UIButton!
+    
+    
     override var preferredStatusBarStyle: UIStatusBarStyle{
-        return UIStatusBarStyle.lightContent
+        return UIStatusBarStyle.default
     }
     
     //UISearchController reference as Optional
@@ -53,10 +65,15 @@ UISearchBarDelegate{
         setTranslucentNavigationBar()
         downloadSeriesData {
             self.seriesCollectionViewOutlet.reloadData()
+            self.fetchGenresFromDatastore()
         }
+        
+        self.fetchSeriesDataFromDatastore()
+        self.carouselPickerViewOutlet.dataSource = self
+        self.carouselPickerViewOutlet.delegate = self
         self.seriesCollectionViewOutlet.dataSource = self
         self.seriesCollectionViewOutlet.delegate = self
-        self.fetchSeriesDataFromDatastore()
+        self.seriesBasicFetchedResultController.delegate = self
         self.seriesCollectionViewOutlet.reloadData()
     }
     
@@ -86,6 +103,12 @@ UISearchBarDelegate{
             downloadComplete()
         }
     }
+    
+    @IBAction func pickerButtonPressed(_ sender: Any) {
+        self.seriesCollectionViewOutlet.isHidden = true
+        self.carouselPickerViewOutlet.isHidden = false
+    }
+    
 }
 
 
@@ -120,13 +143,33 @@ NSFetchedResultsControllerDelegate{
         }
     }
     
+    //Fetches the Genres data from the Datastore
+    func fetchGenresFromDatastore() {
+        var rawGenres = [Genre]()
+        let genreFetchRequest: NSFetchRequest<Genre> = Genre.fetchRequest()
+        do {
+            rawGenres = try context.fetch(genreFetchRequest)
+        }catch {
+           let error = error as NSError
+            print("Error While Fetching Generes: \(error)")
+        }
+        for genre in rawGenres {
+            if !self.persistedGeneres.contains(genre.genre_name!){
+                self.persistedGeneres.append(genre.genre_name!)
+            }
+        }
+        self.carouselPickerViewOutlet.reloadAllComponents()
+        print("Genere Count: \(self.persistedGeneres.count)")
+    }
+    
+    
+    
     // Fetches the Series data from Datastore
     func fetchSeriesDataFromDatastore() {
         let seriesBasicFetchRequest: NSFetchRequest<Series> = Series.fetchRequest()
         let seriesBasicSortDescriptor = NSSortDescriptor(key: "series_rating", ascending: false)
         seriesBasicFetchRequest.sortDescriptors = [seriesBasicSortDescriptor]
-        self.seriesBasicFetchedResultController = NSFetchedResultsController(fetchRequest: seriesBasicFetchRequest, managedObjectContext: (self.container?.viewContext)!, sectionNameKeyPath: nil, cacheName: nil)
-        self.seriesBasicFetchedResultController.delegate = self
+        self.seriesBasicFetchedResultController = NSFetchedResultsController(fetchRequest: seriesBasicFetchRequest, managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil)
         do{
             try self.seriesBasicFetchedResultController.performFetch()
         }catch{
@@ -191,6 +234,7 @@ NSFetchedResultsControllerDelegate{
 //            }
 //        }
 //    }
+    
 }
 
 //MARK: - Scrolling customisation component
@@ -204,6 +248,28 @@ extension CarouselViewController: UIScrollViewDelegate {
         let roundedIndex = index.rounded()
         offset = CGPoint(x: roundedIndex * cellWidthIncludingSpacing - scrollView.contentInset.left, y: -scrollView.contentInset.top)
         targetContentOffset.pointee = offset
+    }
+}
+
+extension CarouselViewController : UIPickerViewDataSource, UIPickerViewDelegate {
+    
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return self.persistedGeneres.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return self.persistedGeneres[row]
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        self.pickerButtonOutlet.setTitle(self.persistedGeneres[row], for: UIControlState.normal)
+        self.carouselPickerViewOutlet.isHidden = true
+        self.seriesCollectionViewOutlet.isHidden = false
     }
 }
 

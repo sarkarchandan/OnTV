@@ -39,7 +39,6 @@ class CarouselCell: UICollectionViewCell {
         self.seriesRatingOutlet.text = "\(series.series_rating)/10"
         
         var genreString: String = ""
-        printDatabaseStatistic()
         if series.toGenre?.count == 0 {
             genreString = "Will be updated..."
         }else{

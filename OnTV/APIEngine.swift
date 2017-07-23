@@ -20,7 +20,7 @@ let BASE_URL_BACKDROP = "http://image.tmdb.org/t/p/w1280"
 
 
 //Your API Key goes here//
-let API_KEY = "API KEY"
+let API_KEY = "API Key Here"
 
 //Custom closure that will denote the completion of the download
 typealias DownloadComplete = () -> ()
