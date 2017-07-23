@@ -168,6 +168,14 @@ NSFetchedResultsControllerDelegate{
     func fetchSeriesDataFromDatastore() {
         let seriesBasicFetchRequest: NSFetchRequest<Series> = Series.fetchRequest()
         let seriesBasicSortDescriptor = NSSortDescriptor(key: "series_rating", ascending: false)
+        
+        let selectedGenre = self.persistedGeneres[self.carouselPickerViewOutlet.selectedRow(inComponent: 0)]
+        
+        if selectedGenre != "All" {
+            let seriesBasicPredicate = NSPredicate(format: "toGenre.genre_name CONTAINS %@", selectedGenre)
+            seriesBasicFetchRequest.predicate = seriesBasicPredicate
+        }
+        
         seriesBasicFetchRequest.sortDescriptors = [seriesBasicSortDescriptor]
         self.seriesBasicFetchedResultController = NSFetchedResultsController(fetchRequest: seriesBasicFetchRequest, managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil)
         do{
@@ -253,7 +261,6 @@ extension CarouselViewController: UIScrollViewDelegate {
 
 extension CarouselViewController : UIPickerViewDataSource, UIPickerViewDelegate {
     
-    
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
@@ -270,6 +277,8 @@ extension CarouselViewController : UIPickerViewDataSource, UIPickerViewDelegate 
         self.pickerButtonOutlet.setTitle(self.persistedGeneres[row], for: UIControlState.normal)
         self.carouselPickerViewOutlet.isHidden = true
         self.seriesCollectionViewOutlet.isHidden = false
+        self.fetchSeriesDataFromDatastore()
+        self.seriesCollectionViewOutlet.reloadData()
     }
 }
 
